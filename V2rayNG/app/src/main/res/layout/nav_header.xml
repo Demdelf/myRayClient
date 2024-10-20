@@ -2,20 +2,35 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="@dimen/nav_header_height"
-    android:background="@drawable/nav_header_bg"
+    android:background="@drawable/inst"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="@dimen/activity_horizontal_margin">
 
-    <TextView
-        android:layout_width="match_parent"
+    <FrameLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:fontFamily="@font/montserrat_thin"
-        android:gravity="center"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="@string/app_name"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+        android:layout_gravity="center">
+
+        <!-- ImageView for the background image -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/inst"
+            android:scaleType="fitCenter"
+            android:contentDescription="InstVPN app" />
+
+        <!-- TextView at the bottom of the ImageView -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:paddingTop="24dp"
+            android:paddingBottom="0dp"
+            android:text="InstVPN"
+            android:textColor="@android:color/white"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+    </FrameLayout>
 
 
 </LinearLayout>

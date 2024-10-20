@@ -12,7 +12,7 @@ android {
         minSdk = 21
         targetSdk = 34
         versionCode = 601
-        versionName = "1.9.7"
+        versionName = "0.0.1"
         multiDexEnabled = true
         splits {
             abi {
@@ -67,7 +67,7 @@ android {
                 else
                     "universal"
 
-                output.outputFileName = "v2rayNG_${variant.versionName}_${abi}.apk"
+                output.outputFileName = "InstVPN_NG_${variant.versionName}_${abi}.apk"
                 if (versionCodes.containsKey(abi)) {
                     output.versionCodeOverride = (1000000 * versionCodes[abi]!!).plus(variant.versionCode)
                 } else {
@@ -129,4 +129,5 @@ dependencies {
     implementation(libs.core)
     implementation(libs.work.runtime.ktx)
     implementation(libs.work.multiprocess)
+    implementation(files("libs/libv2ray.aar"))
 }

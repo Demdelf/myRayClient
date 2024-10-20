@@ -12,6 +12,10 @@ dependencyResolutionManagement {
         mavenCentral()
         jcenter()
         maven { url = uri("https://jitpack.io") }
+
+        flatDir {
+            dirs("libs")
+        }
     }
 }
 rootProject.name = "v2rayNG"
